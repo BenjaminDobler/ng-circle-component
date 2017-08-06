@@ -11,6 +11,9 @@ export class CircleComponent implements OnInit {
   }
 
   @Input()
+  public startDegree:number = 0;
+
+  @Input()
   set progress(value: number) {
     this._progress = value;
     this.updateProgress();
