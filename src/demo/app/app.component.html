@@ -1,1 +1,4 @@
-<circle-component [width]="100" [height]="100"></circle-component>
+<circle-component #circle [width]="100" [height]="100"></circle-component>
+<input type="range" min="0" max="1" step="0.1" (change)="circle.progress = $event.currentTarget.value">
+<input type="range" min="50" max="300" value="100" step="1" (change)="circle.width = $event.currentTarget.value;circle.height = $event.currentTarget.value">
+<input type="range" min="1" max="20" value="3" step="1" (change)="circle.strokeWidth = $event.currentTarget.value">
